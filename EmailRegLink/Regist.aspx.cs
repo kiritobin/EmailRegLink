@@ -85,10 +85,10 @@ namespace EmailRegLink
 
         private void sendMail()
         {
-            string addresser = "user@idaobin.com";
+            string addresser = "邮箱账号";
             string recipient = txtMail.Text.Trim();
             string userName = txtName.Text.Trim();
-            string emailPwd = "daobin@123";
+            string emailPwd = "邮件密码或者授权码";
 
             user = userBll.QueryId(userName);
             string id = EnDecrypt.Encrypt(user.id.ToString());
@@ -101,7 +101,7 @@ namespace EmailRegLink
             message.Subject = title;
             message.Body = content;
             message.Priority = MailPriority.High;
-            SmtpClient client = new SmtpClient("smtp.mxhichina.com", 25);
+            SmtpClient client = new SmtpClient("邮箱服务器地址", 25);
             client.EnableSsl = false;
             client.UseDefaultCredentials = false;
             client.Credentials = new System.Net.NetworkCredential(addresser, emailPwd);
