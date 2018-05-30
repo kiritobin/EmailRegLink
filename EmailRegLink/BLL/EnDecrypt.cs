@@ -10,7 +10,7 @@ namespace EmailRegLink.BLL
 {
     public class EnDecrypt
     {
-       private static string encryptKey = "kiri";    //定义密钥  
+       private static string encryptKey = "bing";    //定义密钥  四位
 
         /// <summary>
         /// 加密
